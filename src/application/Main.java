@@ -34,11 +34,16 @@ public class Main {
         sellerDAO.insert(newSeller);
         System.out.println("New id = " + newSeller.getId());
 
-        System.out.println("\n=== Test 5: Seller  ===");
+        System.out.println("\n=== Test 5: Seller update ===");
         seller = sellerDAO.findById(1);
         seller.setName("Martha Waine");
         seller.setEmail("marthawaine@gmail.com");
         sellerDAO.update(seller);
         System.out.println("Update completed.");
+
+        System.out.println("\n=== Test 6: Seller delete ===");
+        sellerDAO.deleteById(14);
+        sellerDAO.deleteById(15);
+        System.out.println("Deleted");
     }
 }
